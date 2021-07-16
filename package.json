@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "watch": "derver web"
+  },
+  "devDependencies": {
+    "derver": "^0.x"
+  }
+}

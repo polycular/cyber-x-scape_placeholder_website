@@ -1,0 +1,195 @@
+/* Color schema */
+:root {
+  --color_main: #1d83d4;
+  --color_main2: #2196F3;
+  --color_sec: #00FF83;
+
+  --color_grey1: #b4bcc0;
+  --color_grey2: #cfd8dc;
+}
+
+/* Layout */
+/*#region*/
+body {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 2rem);
+  font-family: sans-serif, system-ui;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 5em;
+  padding: 0.5em 1em;
+  margin-bottom: 1rem;
+  color: var(--color_main);
+  background-color: var(--color_grey2);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px var(--color_grey2);
+}
+header a,
+header img {
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+#container_bottom {
+  margin-top: 1rem;
+}
+
+#container_bottom .legal {
+  padding: 0.2em 0.5em;
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+}
+#container_bottom .legal a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer {
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2ch;
+  color: #555;
+  background-color: var(--color_grey2);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px var(--color_grey2);
+}
+
+footer .logo {
+  height: 3em;
+  margin-top: 0.5em;
+}
+/*#endregion*/
+
+/* Content page landing */
+/*#region*/
+main.landing {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main.landing h2 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  font-family: "Courier New", monospace;
+  color: var(--color_main);
+}
+main.landing h3 {
+  font-size: 2em;
+  font-family: "Courier New", monospace;
+  color: var(--color_main);
+}
+
+main.landing .logo {
+  width: 8em;
+}
+main.landing .lettering {
+  height: 6em;
+}
+/*#endregion*/
+
+/* Content */
+/*#region*/
+main {
+  line-height: 1.4;
+  letter-spacing: 0.1ch;
+}
+
+.content_page {
+  display: initial;
+  text-align: initial;
+}
+.content_page.limit_width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+}
+
+.content_page ul {
+  padding-left: 1em;
+}
+
+.content_page li {
+  list-style-type: circle;
+}
+
+.rsaquo::before {
+  content: "\00203a";
+  display: inline-block;
+  margin-right: .2em;
+}
+
+.content_page.style h1 {
+  font-size: 2em;
+  font-family: "Courier New", monospace;
+  color: var(--color_main);
+}
+.content_page.style h2 {
+  font-size: 1.3em;
+  margin-top: 2em;
+  font-family: "Courier New", monospace;
+  color: var(--color_main);
+}
+
+/*#endregion*/
+
+/* Media */
+/*#region*/
+@media only screen and (max-width: 50em) {
+  footer {
+    flex-direction: column;
+  }
+  footer .logo {
+    max-width: 100%;
+    width: 12em;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  header {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+  header img {
+    height: auto;
+  }
+  header .logo {
+    height: 4em;
+  }
+
+  main {
+    text-align: initial;
+  }
+
+  main .logo,
+  main .lettering {
+    display: none;
+  }
+
+  main h2 {
+    font-size: 2em;
+  }
+
+  main h3 {
+    font-size: 1.5em;
+  }
+}
+/*#endregion*/
