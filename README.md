@@ -6,18 +6,27 @@
 
 ### Setup
 
-This repo provides an easy Node.js HTTP dev server with browser livereload capability for convenience.
+This website is static so it could be used by just opening the .html files within the folder web.
 
-- [Download Node.js](https://nodejs.org)
+**Recommendation**
 
-### Commands
+For convenience development we suggest to use a dev server with automatic browser reload capability on file changes.
 
-```powershell
-# Install dependencies
-npm install
+We can recommend you the following Rust based tool:
 
-# Start dev server
-npm run watch
+- [devserver](https://github.com/kettle11/devserver)
+
+Commands:
+
+```sh
+# Install devserver
+cargo install devserver
+
+# Start devserver
+devserver --path web
+
+# In case you are a Nix user you can simply run
+nix-shell --pure
 ```
 
 ## Founding
